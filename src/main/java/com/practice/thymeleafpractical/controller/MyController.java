@@ -1,18 +1,30 @@
 package com.practice.thymeleafpractical.controller;
 
-import java.sql.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MyController {
 
-    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    @GetMapping("/about")
     public String about(Model model) {
+
         model.addAttribute("name", "Dhwaj");
+
         return "about";
+    }
+
+    // handling iteration
+
+    @GetMapping("/iterate")
+    public String iterateHandler(Model m) {
+
+        List<String> names = List.of("Ankit", "Laxmi", "Dhwaj", "Sharma");
+
+        m.addAttribute("names", names);
+        return "iterate";
     }
 }

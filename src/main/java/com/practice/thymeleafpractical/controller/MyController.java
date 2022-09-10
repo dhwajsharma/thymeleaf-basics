@@ -18,7 +18,6 @@ public class MyController {
     }
 
     // handling iteration
-
     @GetMapping("/iterate")
     public String iterateHandler(Model m) {
 
@@ -26,5 +25,15 @@ public class MyController {
 
         m.addAttribute("names", names);
         return "iterate";
+    }
+
+    // handler for conditional statements
+    @GetMapping("/condition")
+    public String conditionalHandler(Model m) {
+
+        int age = 20;
+
+        m.addAttribute("isActive", "true");
+        return "condition";
     }
 }

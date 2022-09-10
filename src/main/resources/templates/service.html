@@ -9,6 +9,9 @@
   <body>
     <!-- <footer id="hostTag" th:replace="footer::footer1"></footer> -->
     <!-- <footer id="hostTag" th:insert="footer::footer1"></footer> -->
-    <footer id="hostTag" th:include="footer::footer1"></footer>
+    <footer
+      id="hostTag"
+      th:include="footer::footer1('title', 'subtitle')"
+    ></footer>
   </body>
 </html>

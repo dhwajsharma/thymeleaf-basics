@@ -7,9 +7,10 @@
     <title>Document</title>
   </head>
   <body>
-    <footer id="fragmentTag" th:fragment="footer1">
+    <footer id="fragmentTag" th:fragment="footer1(title, subtitle)">
       <div class="container">
-        <h2>this is footer</h2>
+        <h2 th:text="${title}"></h2>
+        <h2 th:text="${subtitle}"></h2>
       </div>
     </footer>
   </body>

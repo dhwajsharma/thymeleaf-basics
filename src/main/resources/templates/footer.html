@@ -7,6 +7,10 @@
     <title>Document</title>
   </head>
   <body>
-    <h2><span th:text="${isActive} ? 'active' : 'not active'"></span></h2>
+    <footer id="fragmentTag" th:fragment="footer1">
+      <div class="container">
+        <h2>this is footer</h2>
+      </div>
+    </footer>
   </body>
 </html>
